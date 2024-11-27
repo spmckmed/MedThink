@@ -1,0 +1,146 @@
+.upload-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.upload-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.mega-drop-zone {
+    min-height: 400px;
+    border: 3px dashed var(--primary-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.mega-drop-zone:hover {
+    background-color: rgba(41, 171, 180, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mega-drop-zone.drag-over {
+    background-color: rgba(41, 171, 180, 0.1);
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+.drop-zone-prompt {
+    color: var(--text-muted);
+}
+
+.drop-zone-prompt i {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+}
+
+.drop-zone-prompt h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.drop-zone-input {
+    display: none;
+}
+
+/* Formulaire de métadonnées */
+.metadata-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.metadata-form.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Barre de progression */
+.upload-progress {
+    margin-top: 2rem;
+}
+
+.progress {
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.status-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.status-message.success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.status-message.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+/* Animation pour le drag & drop */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.drag-over {
+    animation: pulse 1.5s infinite;
+}
+
+/* Prévisualisation du fichier */
+.file-preview {
+    background-color: rgba(41, 171, 180, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-preview i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.file-info {
+    flex-grow: 1;
+}
+
+.file-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.file-size {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}

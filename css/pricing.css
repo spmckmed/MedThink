@@ -1,0 +1,213 @@
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(45, 55, 72, 0.4);
+}
+
+.pricing-card.popular {
+    border: 2px solid #29abb4;
+}
+
+/* Popular Badge */
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #29abb4;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Pricing Header */
+.pricing-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+    color: #2D3748;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    color: #4A5568;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    margin-bottom: 0.5rem;
+}
+
+.price .amount {
+    color: #2D3748;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.price .period {
+    color: #4A5568;
+    font-size: 1rem;
+}
+
+.total-price {
+    color: #4A5568;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.payment-options {
+    font-size: 0.85rem;
+    color: #4A5568;
+}
+
+.payment-options .option {
+    margin-bottom: 0.25rem;
+}
+
+/* Features List */
+.pricing-features {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-features li {
+    padding: 0.5rem 0;
+    color: #4A5568;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-features li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pricing-features li.included::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2329abb4'%3E%3Cpath d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
+}
+
+.pricing-features li.excluded {
+    color: #A0AEC0;
+}
+
+.pricing-features li.excluded::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23A0AEC0'%3E%3Cpath d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z'/%3E%3C/svg%3E");
+}
+
+/* Action Button */
+.btn-primary {
+    background-color: #29abb4;
+    border-color: #29abb4;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #238d95;
+    border-color: #238d95;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: #29abb4;
+    border-color: #29abb4;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #29abb4;
+    border-color: #29abb4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Guarantee Section */
+.guarantee-section {
+    margin-top: 5rem;
+    padding: 3rem 0;
+}
+
+.guarantee-badge {
+    display: inline-block;
+    padding: 2rem 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.guarantee-badge img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.guarantee-badge h4 {
+    color: #2D3748;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.guarantee-badge p {
+    color: #4A5568;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .pricing-card {
+        margin-bottom: 2rem;
+    }
+    
+    .pricing-section {
+        padding: 100px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .price .amount {
+        font-size: 2rem;
+    }
+    
+    .pricing-header h3 {
+        font-size: 1.25rem;
+    }
+}

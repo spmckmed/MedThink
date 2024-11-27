@@ -1,0 +1,85 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 3rem !important;
+}
+
+/* Style pour le séparateur "ou" */
+.divider {
+    display: inline-block;
+    position: relative;
+    color: #6c757d;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.divider::before {
+    left: -50%;
+}
+
+.divider::after {
+    right: -50%;
+}
+
+/* Style pour le bouton Google */
+#googleSignIn {
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+#googleSignIn:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Style pour les inputs */
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Style pour le bouton principal */
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* Messages d'erreur */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}

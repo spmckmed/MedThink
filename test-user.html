@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDTHINK - Création Compte Test</title>
+</head>
+<body>
+    <h1>Création du compte test en cours...</h1>
+    <p>Veuillez patienter pendant la création du compte...</p>
+    
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/test-data.js"></script>
+    <script>
+        // Rediriger vers la page de connexion après 3 secondes
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 3000);
+    </script>
+</body>
+</html>

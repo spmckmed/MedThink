@@ -1,0 +1,67 @@
+/* Profile Picture */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-photo-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-photo-btn i {
+    font-size: 1rem;
+}
+
+/* Form Styles */
+.form-control:focus,
+.form-select:focus {
+    border-color: #29abb4;
+    box-shadow: 0 0 0 0.2rem rgba(41, 171, 180, 0.25);
+}
+
+.form-control[readonly] {
+    background-color: #f8fafc;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #29abb4;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Stats */
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .edit-photo-btn {
+        width: 28px;
+        height: 28px;
+    }
+}

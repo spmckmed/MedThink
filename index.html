@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDTHINK - Plateforme de partage de connaissances médicales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .profile-button {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .profile-button:hover {
+            border-color: #29abb4;
+        }
+
+        .profile-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-menu {
+            min-width: 280px;
+            padding: 1rem;
+        }
+
+        .profile-menu-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .profile-menu-header img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .profile-menu-header .profile-info {
+            flex: 1;
+        }
+
+        .profile-menu-header h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .profile-menu-header p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        .profile-menu .dropdown-item {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-menu .dropdown-item i {
+            margin-right: 0.5rem;
+            width: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MEDTHINK</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Catalogue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#specialties">Spécialités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                </ul>
+
+                <!-- Bouton de connexion -->
+                <a href="login.html" id="loginButton" class="btn profile-button">
+                    <img src="img/icons/login.svg" alt="Se connecter" id="loginImage">
+                </a>
+
+                <!-- Menu profil (caché par défaut) -->
+                <div class="dropdown" id="profileButton">
+                    <button class="btn profile-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/icons/profile-male.svg" alt="Profile" id="profileImage">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end profile-menu" id="profileMenu">
+                        <div class="profile-menu-header">
+                            <img src="img/icons/profile-male.svg" alt="Profile" id="menuProfileImage">
+                            <div class="profile-info">
+                                <h6 id="profileName">Dr. Nom Prénom</h6>
+                                <p id="profileSpecialty">Spécialité</p>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="profile.html">
+                            <i class="bi bi-person"></i> Mon profil
+                        </a>
+                        <a class="dropdown-item" href="dashboard.html">
+                            <i class="bi bi-speedometer2"></i> Tableau de bord
+                        </a>
+                        <a class="dropdown-item" href="#settings">
+                            <i class="bi bi-gear"></i> Paramètres
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" id="logoutButton">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <span class="title-med">MED</span><span class="title-think">THINK</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        La plateforme qui <strong>révolutionne</strong> le partage d'expertise<br>
+                        <span class="highlight-text">entre professionnels de santé</span>
+                    </p>
+                    <div class="features-list-container">
+                        <ul class="features-list">
+                            <li>Des capsules vidéos courtes et efficaces</li>
+                            <li>Des experts terrain pour une vision à 360°</li>
+                            <li>Le savoir médical à portée de main</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="pricing.html" class="btn btn-primary btn-lg">J'accède aux vidéos</a>
+                        <a href="#creator" class="btn btn-outline-primary btn-lg">Devenez créateur(trice)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Feature 1: Expertise -->
+                <div class="col-lg">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <img src="img/icons/1i.png" alt="Expertise" class="feature-img">
+                            <img src="img/icons/1hoover.png" alt="Expertise" class="feature-img-hover">
+                        </div>
+                        <h3>Expertise</h3>
+                        <p>Accédez à des connaissances médicales de pointe partagées par des experts reconnus</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2: Formation -->
+                <div class="col-lg">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <img src="img/icons/2i.png" alt="Formation" class="feature-img">
+                            <img src="img/icons/2hoover.png" alt="Formation" class="feature-img-hover">
+                        </div>
+                        <h3>Formation</h3>
+                        <p>Développez vos compétences à travers des contenus pédagogiques ciblés</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3: Collaboration -->
+                <div class="col-lg">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <img src="img/icons/3i.png" alt="Collaboration" class="feature-img">
+                            <img src="img/icons/3hoover.png" alt="Collaboration" class="feature-img-hover">
+                        </div>
+                        <h3>Collaboration</h3>
+                        <p>Échangez avec vos pairs et enrichissez votre réseau professionnel</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4: Innovation -->
+                <div class="col-lg">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <img src="img/icons/4i.png" alt="Innovation" class="feature-img">
+                            <img src="img/icons/4hoover.png" alt="Innovation" class="feature-img-hover">
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Restez à la pointe des avancées médicales et des nouvelles pratiques</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5: Accessibilité -->
+                <div class="col-lg">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <img src="img/icons/5i.png" alt="Accessibilité" class="feature-img">
+                            <img src="img/icons/5hoover.png" alt="Accessibilité" class="feature-img-hover">
+                        </div>
+                        <h3>Accessibilité</h3>
+                        <p>Apprenez à votre rythme, où que vous soyez, quand vous le souhaitez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professions Scroll Section -->
+    <section class="professions-scroll">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item">
+                    <span class="ticker-content">Médecins • Chirurgiens • Psychiatres • Radiologues • Anesthésistes • Pédiatres • Infirmiers • Aides-soignants • Kinésithérapeutes • Ergothérapeutes • Psychomotriciens • Pharmaciens</span>
+                    <span class="ticker-content">Médecins • Chirurgiens • Psychiatres • Radiologues • Anesthésistes • Pédiatres • Infirmiers • Aides-soignants • Kinésithérapeutes • Ergothérapeutes • Psychomotriciens • Pharmaciens</span>
+                </div>
+            </div>
+        </div>
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item ticker-reverse">
+                    <span class="ticker-content">Orthophonistes • Orthoptistes • Podologues • Psychologues • Neuropsychologues • Ostéopathes • Sages-femmes • Puéricultrices • Psychothérapeutes • Diététiciens • Manipulateurs radio</span>
+                    <span class="ticker-content">Orthophonistes • Orthoptistes • Podologues • Psychologues • Neuropsychologues • Ostéopathes • Sages-femmes • Puéricultrices • Psychothérapeutes • Diététiciens • Manipulateurs radio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Videos Section -->
+    <section class="latest-videos py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Dernières Vidéos</h2>
+            <div class="video-carousel">
+                <!-- Video cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MedThink</h5>
+                    <p>Plateforme de partage de connaissances médicales</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="creator-login.html">Espace Créateur</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/nav-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Fichiers de configuration avec clés API
+js/config.js
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dépendances
+node_modules/

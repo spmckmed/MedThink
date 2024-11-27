@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fond dégradé -->
+    <rect width="640" height="360" fill="url(#grad1)"/>
+    
+    <!-- Illustration médicale -->
+    <circle cx="320" cy="180" r="100" fill="#29abb4" fill-opacity="0.1"/>
+    <path d="M270 180 L370 180 M320 130 L320 230" 
+          stroke="#29abb4" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Éléments décoratifs -->
+    <circle cx="220" cy="120" r="40" fill="#29abb4" fill-opacity="0.05"/>
+    <circle cx="420" cy="240" r="60" fill="#29abb4" fill-opacity="0.05"/>
+    
+    <!-- Texte -->
+    <text x="320" y="300" 
+          font-family="Poppins, sans-serif" 
+          font-size="24" 
+          fill="#2D3748" 
+          text-anchor="middle">Cardiologie Interventionnelle</text>
+    
+    <!-- Définition du dégradé -->
+    <defs>
+        <linearGradient id="grad1" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" style="stop-color:#f8fafc"/>
+            <stop offset="100%" style="stop-color:#e2e8f0"/>
+        </linearGradient>
+    </defs>
+</svg>

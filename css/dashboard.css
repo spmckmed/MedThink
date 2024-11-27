@@ -1,0 +1,141 @@
+/* Layout */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar-header {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebar .nav-link {
+    color: #4a5568;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    color: #29abb4;
+    background-color: rgba(41, 171, 180, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: #29abb4;
+    background-color: rgba(41, 171, 180, 0.1);
+    border-right: 3px solid #29abb4;
+}
+
+.sidebar .bi {
+    font-size: 1.25rem;
+}
+
+/* Search Bar */
+.input-group .form-control:focus,
+.input-group .input-group-text {
+    box-shadow: none;
+    border-color: #e2e8f0;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Stats Cards */
+.card-subtitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.card-title {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Welcome Text */
+.welcome-text {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Video Cards */
+.video-card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.video-card img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.video-card .card-body {
+    padding: 1rem;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+/* User Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(41, 171, 180, 0.1);
+    color: #29abb4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 64px;
+    }
+    
+    .sidebar .nav-link span {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+}

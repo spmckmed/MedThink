@@ -1,0 +1,66 @@
+.profile-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.profile-button:hover {
+    border-color: #29abb4;
+}
+
+.profile-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-menu {
+    min-width: 280px;
+    padding: 1rem;
+}
+
+.profile-menu-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.profile-menu-header img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile-menu-header .profile-info {
+    flex: 1;
+}
+
+.profile-menu-header h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.profile-menu-header p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.profile-menu .dropdown-item {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.profile-menu .dropdown-item i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
